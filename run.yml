@@ -1,9 +1,7 @@
 ---
 - hosts: all
   become: yes
-  gather_facts: no
-  tasks:
-  - name: show host variables
-    debug:
-      var: hostvars
+  roles:
+    - { role: sudo }
+    - { role: users }
 
